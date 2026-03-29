@@ -1,0 +1,103 @@
+{
+	"type": "root",
+	"children": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"value": "The parser handles nested brackets correctly,\nfor example the alias could contain an image:",
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 1,
+							"offset": 0
+						},
+						"end": {
+							"line": 2,
+							"column": 46,
+							"offset": 91
+						}
+					}
+				}
+			],
+			"position": {
+				"start": {
+					"line": 1,
+					"column": 1,
+					"offset": 0
+				},
+				"end": {
+					"line": 2,
+					"column": 46,
+					"offset": 91
+				}
+			}
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "aliasWikilink",
+					"destination": "test",
+					"children": [
+						{
+							"type": "image",
+							"title": null,
+							"url": "image.png",
+							"alt": "image",
+							"position": {
+								"start": {
+									"line": 4,
+									"column": 8,
+									"offset": 100
+								},
+								"end": {
+									"line": 4,
+									"column": 27,
+									"offset": 119
+								}
+							}
+						}
+					],
+					"position": {
+						"start": {
+							"line": 4,
+							"column": 1,
+							"offset": 93
+						},
+						"end": {
+							"line": 4,
+							"column": 29,
+							"offset": 121
+						}
+					}
+				}
+			],
+			"position": {
+				"start": {
+					"line": 4,
+					"column": 1,
+					"offset": 93
+				},
+				"end": {
+					"line": 4,
+					"column": 29,
+					"offset": 121
+				}
+			}
+		}
+	],
+	"position": {
+		"start": {
+			"line": 1,
+			"column": 1,
+			"offset": 0
+		},
+		"end": {
+			"line": 4,
+			"column": 29,
+			"offset": 121
+		}
+	}
+}

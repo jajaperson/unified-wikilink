@@ -1,0 +1,1 @@
+An [[empty|]] alias is invalid.
