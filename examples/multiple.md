@@ -1,0 +1,1 @@
+In [[TAOCP|_The Art of Computer Programming_]], [[Donald Knuth]] presents a heuristic (but incorrect) argument for the [[Standard Young tableaux#Properties|hook length formula]].

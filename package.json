@@ -1,0 +1,33 @@
+{
+	"author": "James Jensen <jamesarthurjensen@gmail.com> (https://jajaperson.me)",
+	"private": true,
+	"type": "module",
+	"keywords": [
+		"remark",
+		"markdown",
+		"wikilink",
+		"obsidian"
+	],
+	"scripts": {
+		"test": "pnpm -r test",
+		"format": "prettier --write -- .",
+		"test-coverage": "c8 --100 --reporter lcov -- pnpm test",
+		"clean": "tsc --build --clean",
+		"build": "tsc --build --clean && tsc --build"
+	},
+	"license": "MIT",
+	"packageManager": "pnpm@10.20.0",
+	"devDependencies": {
+		"@types/node": "^25.5.0",
+		"c8": "^11.0.0",
+		"prettier": "^3.8.1",
+		"typescript": "^6.0.2"
+	},
+	"bugs": "https://github.com/jajaperson/remark-wikilink-syntaxs/issues",
+	"contributors": [
+		"James Jensen <jamesarthurjensen@gmail.com> (https://jajaperson.me)"
+	],
+	"dependencies": {
+		"devlop": "^1.1.0"
+	}
+}

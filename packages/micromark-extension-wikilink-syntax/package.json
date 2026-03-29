@@ -1,0 +1,31 @@
+{
+	"author": "James Jensen <jamesarthurjensen@gmail.com> (https://jajaperson.me)",
+	"name": "micromark-extension-wikilink-syntax",
+	"repository": "https://github.com/jajaperson/remark-wikilink-syntax/tree/main/packages/micromark-extension-wikilink-syntax",
+	"type": "module",
+	"main": "index.js",
+	"version": "1.0.0",
+	"keywords": [
+		"remark",
+		"markdown",
+		"wikilink",
+		"obsidian",
+		"micromark"
+	],
+	"license": "MIT",
+	"packageManager": "pnpm@10.20.0",
+	"bugs": "https://github.com/jajaperson/remark-iwikilink-syntax/issues",
+	"contributors": [
+		"James Jensen <jamesarthurjensen@gmail.com> (https://jajaperson.me)"
+	],
+	"files": [
+		"index.js",
+		"index.d.ts",
+		"lib"
+	],
+	"dependencies": {
+		"devlop": "^1.1.0",
+		"micromark-util-symbol": "^2.0.1",
+		"micromark-util-types": "^2.0.2"
+	}
+}

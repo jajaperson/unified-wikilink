@@ -1,0 +1,199 @@
+{
+	"type": "root",
+	"children": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"value": "In ",
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 1,
+							"offset": 0
+						},
+						"end": {
+							"line": 1,
+							"column": 4,
+							"offset": 3
+						}
+					}
+				},
+				{
+					"type": "aliasWikilink",
+					"destination": "TAOCP",
+					"children": [
+						{
+							"type": "emphasis",
+							"children": [
+								{
+									"type": "text",
+									"value": "The Art of Computer Programming",
+									"position": {
+										"start": {
+											"line": 1,
+											"column": 13,
+											"offset": 12
+										},
+										"end": {
+											"line": 1,
+											"column": 44,
+											"offset": 43
+										}
+									}
+								}
+							],
+							"position": {
+								"start": {
+									"line": 1,
+									"column": 12,
+									"offset": 11
+								},
+								"end": {
+									"line": 1,
+									"column": 45,
+									"offset": 44
+								}
+							}
+						}
+					],
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 4,
+							"offset": 3
+						},
+						"end": {
+							"line": 1,
+							"column": 47,
+							"offset": 46
+						}
+					}
+				},
+				{
+					"type": "text",
+					"value": ", ",
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 47,
+							"offset": 46
+						},
+						"end": {
+							"line": 1,
+							"column": 49,
+							"offset": 48
+						}
+					}
+				},
+				{
+					"type": "wikilink",
+					"destination": "Donald Knuth",
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 49,
+							"offset": 48
+						},
+						"end": {
+							"line": 1,
+							"column": 65,
+							"offset": 64
+						}
+					}
+				},
+				{
+					"type": "text",
+					"value": " presents a heuristic (but incorrect) argument for the ",
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 65,
+							"offset": 64
+						},
+						"end": {
+							"line": 1,
+							"column": 120,
+							"offset": 119
+						}
+					}
+				},
+				{
+					"type": "aliasWikilink",
+					"destination": "Standard Young tableaux#Properties",
+					"children": [
+						{
+							"type": "text",
+							"value": "hook length formula",
+							"position": {
+								"start": {
+									"line": 1,
+									"column": 157,
+									"offset": 156
+								},
+								"end": {
+									"line": 1,
+									"column": 176,
+									"offset": 175
+								}
+							}
+						}
+					],
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 120,
+							"offset": 119
+						},
+						"end": {
+							"line": 1,
+							"column": 178,
+							"offset": 177
+						}
+					}
+				},
+				{
+					"type": "text",
+					"value": ".",
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 178,
+							"offset": 177
+						},
+						"end": {
+							"line": 1,
+							"column": 179,
+							"offset": 178
+						}
+					}
+				}
+			],
+			"position": {
+				"start": {
+					"line": 1,
+					"column": 1,
+					"offset": 0
+				},
+				"end": {
+					"line": 1,
+					"column": 179,
+					"offset": 178
+				}
+			}
+		}
+	],
+	"position": {
+		"start": {
+			"line": 1,
+			"column": 1,
+			"offset": 0
+		},
+		"end": {
+			"line": 1,
+			"column": 179,
+			"offset": 178
+		}
+	}
+}

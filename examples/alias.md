@@ -1,0 +1,1 @@
+This plugin supports [[Obsidian|Obsidian's]] wikilink syntax.

@@ -1,0 +1,1 @@
+This plugin is an [[mdast syntax extension|`mdast` syntax extension]].

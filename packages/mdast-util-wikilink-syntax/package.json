@@ -1,0 +1,40 @@
+{
+	"author": "James Jensen <jamesarthurjensen@gmail.com> (https://jajaperson.me)",
+	"name": "mdast-util-wikilink-syntax",
+	"repository": "https://github.com/jajaperson/remark-wikilink-syntax/tree/main/packages/mdast-util-wikilink-syntax",
+	"type": "module",
+	"main": "index.js",
+	"version": "1.0.1",
+	"scripts": {
+		"test": "node --conditions development test/index.js",
+		"write-fixtures": "node --conditions development test/write-fixtures.js"
+	},
+	"keywords": [
+		"remark",
+		"markdown",
+		"wikilink",
+		"obsidian",
+		"ast",
+		"mdast"
+	],
+	"license": "MIT",
+	"packageManager": "pnpm@10.20.0",
+	"bugs": "https://github.com/jajaperson/remark-wikilink-syntaxs/issues",
+	"contributors": [
+		"James Jensen <jamesarthurjensen@gmail.com> (https://jajaperson.me)"
+	],
+	"files": [
+		"index.js",
+		"index.d.ts",
+		"lib"
+	],
+	"dependencies": {
+		"@types/mdast": "^4.0.4",
+		"devlop": "^1.1.0"
+	},
+	"devDependencies": {
+		"micromark-extension-wikilink-syntax": "workspace:*",
+		"mdast-util-from-markdown": "^2.0.3",
+		"unist-util-visit": "^5.1.0"
+	}
+}

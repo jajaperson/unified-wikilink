@@ -1,0 +1,116 @@
+{
+	"type": "root",
+	"children": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"value": "This plugin is an ",
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 1,
+							"offset": 0
+						},
+						"end": {
+							"line": 1,
+							"column": 19,
+							"offset": 18
+						}
+					}
+				},
+				{
+					"type": "aliasWikilink",
+					"destination": "mdast syntax extension",
+					"children": [
+						{
+							"type": "inlineCode",
+							"value": "mdast",
+							"position": {
+								"start": {
+									"line": 1,
+									"column": 44,
+									"offset": 43
+								},
+								"end": {
+									"line": 1,
+									"column": 51,
+									"offset": 50
+								}
+							}
+						},
+						{
+							"type": "text",
+							"value": " syntax extension",
+							"position": {
+								"start": {
+									"line": 1,
+									"column": 51,
+									"offset": 50
+								},
+								"end": {
+									"line": 1,
+									"column": 68,
+									"offset": 67
+								}
+							}
+						}
+					],
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 19,
+							"offset": 18
+						},
+						"end": {
+							"line": 1,
+							"column": 70,
+							"offset": 69
+						}
+					}
+				},
+				{
+					"type": "text",
+					"value": ".",
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 70,
+							"offset": 69
+						},
+						"end": {
+							"line": 1,
+							"column": 71,
+							"offset": 70
+						}
+					}
+				}
+			],
+			"position": {
+				"start": {
+					"line": 1,
+					"column": 1,
+					"offset": 0
+				},
+				"end": {
+					"line": 1,
+					"column": 71,
+					"offset": 70
+				}
+			}
+		}
+	],
+	"position": {
+		"start": {
+			"line": 1,
+			"column": 1,
+			"offset": 0
+		},
+		"end": {
+			"line": 1,
+			"column": 71,
+			"offset": 70
+		}
+	}
+}
