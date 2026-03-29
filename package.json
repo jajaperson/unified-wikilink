@@ -23,7 +23,7 @@
 		"prettier": "^3.8.1",
 		"typescript": "^6.0.2"
 	},
-	"bugs": "https://github.com/jajaperson/remark-wikilink-syntaxs/issues",
+	"bugs": "https://github.com/jajaperson/unified-wikilinks/issues",
 	"contributors": [
 		"James Jensen <jamesarthurjensen@gmail.com> (https://jajaperson.me)"
 	],

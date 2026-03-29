@@ -62,7 +62,7 @@ to enable wikilinks ([`Extension`][micromark-extension]).
 This package is safe.
 
 [micromark]: https://github.com/micromark/micromark
-[mdast-util-wikilink-syntax]: https://github.com/jajaperson/remark-wikilink-syntax/tree/main/packages/mdast-util-wikilink-syntax
+[mdast-util-wikilink-syntax]: https://github.com/jajaperson/unified-wikilink/tree/main/packages/mdast-util-wikilink-syntax
 [esmsh]: https://esm.sh
 [esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
 [micromark-extension]: https://github.com/micromark/micromark#syntaxextension

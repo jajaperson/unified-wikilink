@@ -9,7 +9,7 @@ Note these are both syntax only.
 To actually do anything, you will need to replace wikilinks with appropriate markdown constructs
 using something like [unist-util-visit][].
 
-[mdast-util-wikilink-syntax]: https://github.com/jajaperson/remark-wikilink-syntax/tree/main/packages/mdast-util-wikilink-syntax
-[micromark-extension-wikilink-syntax]: https://github.com/jajaperson/remark-wikilink-syntax/tree/main/packages/micromark-extension-wikilink-syntax
+[mdast-util-wikilink-syntax]: https://github.com/jajaperson/unified-wikilink/tree/main/packages/mdast-util-wikilink-syntax
+[micromark-extension-wikilink-syntax]: https://github.com/jajaperson/unified-wikilink/tree/main/packages/micromark-extension-wikilink-syntax
 [unist-util-visit]: https://github.com/syntax-tree/unist-util-visit
 [unified]: https://unifiedjs.com
