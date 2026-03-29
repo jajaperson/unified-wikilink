@@ -1,5 +1,5 @@
 {
-	"author": "James Jensen <jamesarthurjensen@gmail.com> (https://jajaperson.me)",
+	"author": "James Jensen <jamesarthurjensen@gmail.com> (https://jaj.sh)",
 	"private": true,
 	"type": "module",
 	"keywords": [
@@ -25,7 +25,7 @@
 	},
 	"bugs": "https://github.com/jajaperson/unified-wikilinks/issues",
 	"contributors": [
-		"James Jensen <jamesarthurjensen@gmail.com> (https://jajaperson.me)"
+		"James Jensen <jamesarthurjensen@gmail.com> (https://jaj.sh)"
 	],
 	"dependencies": {
 		"devlop": "^1.1.0"

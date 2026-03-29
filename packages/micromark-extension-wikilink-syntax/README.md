@@ -1,4 +1,4 @@
-# micromark-extension-gfm-strikethrough
+# micromark-extension-wikilink-syntax
 
 Syntax-only [micromark][] extension for parsing [Obsidian][]-style wikilinks
 whose aliases can contain markdown.

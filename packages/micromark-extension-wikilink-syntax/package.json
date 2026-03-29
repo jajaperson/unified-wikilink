@@ -1,10 +1,10 @@
 {
-	"author": "James Jensen <jamesarthurjensen@gmail.com> (https://jajaperson.me)",
+	"author": "James Jensen <jamesarthurjensen@gmail.com> (https://jaj.sh)",
 	"name": "micromark-extension-wikilink-syntax",
 	"repository": "https://github.com/jajaperson/unified-wikilink/tree/main/packages/micromark-extension-wikilink-syntax",
 	"type": "module",
 	"main": "index.js",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"keywords": [
 		"remark",
 		"markdown",
@@ -14,9 +14,9 @@
 	],
 	"license": "MIT",
 	"packageManager": "pnpm@10.20.0",
-	"bugs": "https://github.com/jajaperson/remark-iwikilink-syntax/issues",
+	"bugs": "https://github.com/jajaperson/unified-wikilink/issues",
 	"contributors": [
-		"James Jensen <jamesarthurjensen@gmail.com> (https://jajaperson.me)"
+		"James Jensen <jamesarthurjensen@gmail.com> (https://jaj.sh)"
 	],
 	"files": [
 		"index.js",
