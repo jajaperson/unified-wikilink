@@ -14,4 +14,5 @@ export const inputs = {
 	multipleEmbed: "Should handle multiple wikilink embeds in one document",
 	attentionAliasEmbed: "Should handle a wikilink embeds with an emphasis construct in the alt text",
 	loneExclamation: "Should leave a stray `!` alone",
+	escaped: "Should account for escapes",
 };

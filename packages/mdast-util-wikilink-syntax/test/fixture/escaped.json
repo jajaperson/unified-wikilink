@@ -1,0 +1,590 @@
+{
+	"type": "root",
+	"children": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"value": "This should not produce a wikilink [[test]].",
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 1,
+							"offset": 0
+						},
+						"end": {
+							"line": 1,
+							"column": 46,
+							"offset": 45
+						}
+					}
+				}
+			],
+			"position": {
+				"start": {
+					"line": 1,
+					"column": 1,
+					"offset": 0
+				},
+				"end": {
+					"line": 1,
+					"column": 46,
+					"offset": 45
+				}
+			}
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"value": "This should preduce a !",
+					"position": {
+						"start": {
+							"line": 3,
+							"column": 1,
+							"offset": 47
+						},
+						"end": {
+							"line": 3,
+							"column": 25,
+							"offset": 71
+						}
+					}
+				},
+				{
+					"type": "wikilink",
+					"destination": "wikilink",
+					"position": {
+						"start": {
+							"line": 3,
+							"column": 25,
+							"offset": 71
+						},
+						"end": {
+							"line": 3,
+							"column": 37,
+							"offset": 83
+						}
+					}
+				},
+				{
+					"type": "text",
+					"value": ", not an embed.",
+					"position": {
+						"start": {
+							"line": 3,
+							"column": 37,
+							"offset": 83
+						},
+						"end": {
+							"line": 3,
+							"column": 52,
+							"offset": 98
+						}
+					}
+				}
+			],
+			"position": {
+				"start": {
+					"line": 3,
+					"column": 1,
+					"offset": 47
+				},
+				"end": {
+					"line": 3,
+					"column": 52,
+					"offset": 98
+				}
+			}
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"value": "This should produce a wikilink ",
+					"position": {
+						"start": {
+							"line": 5,
+							"column": 1,
+							"offset": 100
+						},
+						"end": {
+							"line": 5,
+							"column": 32,
+							"offset": 131
+						}
+					}
+				},
+				{
+					"type": "wikilink",
+					"destination": "]",
+					"position": {
+						"start": {
+							"line": 5,
+							"column": 32,
+							"offset": 131
+						},
+						"end": {
+							"line": 5,
+							"column": 38,
+							"offset": 137
+						}
+					}
+				},
+				{
+					"type": "text",
+					"value": ", so should ",
+					"position": {
+						"start": {
+							"line": 5,
+							"column": 38,
+							"offset": 137
+						},
+						"end": {
+							"line": 5,
+							"column": 50,
+							"offset": 149
+						}
+					}
+				},
+				{
+					"type": "wikilink",
+					"destination": "]this",
+					"position": {
+						"start": {
+							"line": 5,
+							"column": 50,
+							"offset": 149
+						},
+						"end": {
+							"line": 5,
+							"column": 60,
+							"offset": 159
+						}
+					}
+				},
+				{
+					"type": "text",
+					"value": ", so should this ",
+					"position": {
+						"start": {
+							"line": 5,
+							"column": 60,
+							"offset": 159
+						},
+						"end": {
+							"line": 5,
+							"column": 77,
+							"offset": 176
+						}
+					}
+				},
+				{
+					"type": "wikilink",
+					"destination": "\\a",
+					"position": {
+						"start": {
+							"line": 5,
+							"column": 77,
+							"offset": 176
+						},
+						"end": {
+							"line": 5,
+							"column": 83,
+							"offset": 182
+						}
+					}
+				},
+				{
+					"type": "text",
+					"value": ", and so should this ",
+					"position": {
+						"start": {
+							"line": 5,
+							"column": 83,
+							"offset": 182
+						},
+						"end": {
+							"line": 5,
+							"column": 104,
+							"offset": 203
+						}
+					}
+				},
+				{
+					"type": "wikilink",
+					"destination": "\\e",
+					"position": {
+						"start": {
+							"line": 5,
+							"column": 104,
+							"offset": 203
+						},
+						"end": {
+							"line": 5,
+							"column": 111,
+							"offset": 210
+						}
+					}
+				},
+				{
+					"type": "text",
+					"value": ".",
+					"position": {
+						"start": {
+							"line": 5,
+							"column": 111,
+							"offset": 210
+						},
+						"end": {
+							"line": 5,
+							"column": 112,
+							"offset": 211
+						}
+					}
+				}
+			],
+			"position": {
+				"start": {
+					"line": 5,
+					"column": 1,
+					"offset": 100
+				},
+				"end": {
+					"line": 5,
+					"column": 112,
+					"offset": 211
+				}
+			}
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"value": "This should preduce a wikilink with alias ",
+					"position": {
+						"start": {
+							"line": 7,
+							"column": 1,
+							"offset": 213
+						},
+						"end": {
+							"line": 7,
+							"column": 43,
+							"offset": 255
+						}
+					}
+				},
+				{
+					"type": "inlineCode",
+					"value": "]",
+					"position": {
+						"start": {
+							"line": 7,
+							"column": 43,
+							"offset": 255
+						},
+						"end": {
+							"line": 7,
+							"column": 46,
+							"offset": 258
+						}
+					}
+				},
+				{
+					"type": "text",
+					"value": " ",
+					"position": {
+						"start": {
+							"line": 7,
+							"column": 46,
+							"offset": 258
+						},
+						"end": {
+							"line": 7,
+							"column": 47,
+							"offset": 259
+						}
+					}
+				},
+				{
+					"type": "aliasWikilink",
+					"destination": "wikilink",
+					"children": [
+						{
+							"type": "text",
+							"value": "]",
+							"position": {
+								"start": {
+									"line": 7,
+									"column": 58,
+									"offset": 270
+								},
+								"end": {
+									"line": 7,
+									"column": 60,
+									"offset": 272
+								}
+							}
+						}
+					],
+					"position": {
+						"start": {
+							"line": 7,
+							"column": 47,
+							"offset": 259
+						},
+						"end": {
+							"line": 7,
+							"column": 62,
+							"offset": 274
+						}
+					}
+				},
+				{
+					"type": "text",
+					"value": ", and this one with ",
+					"position": {
+						"start": {
+							"line": 7,
+							"column": 62,
+							"offset": 274
+						},
+						"end": {
+							"line": 7,
+							"column": 82,
+							"offset": 294
+						}
+					}
+				},
+				{
+					"type": "inlineCode",
+					"value": "\\",
+					"position": {
+						"start": {
+							"line": 7,
+							"column": 82,
+							"offset": 294
+						},
+						"end": {
+							"line": 7,
+							"column": 85,
+							"offset": 297
+						}
+					}
+				},
+				{
+					"type": "text",
+					"value": " ",
+					"position": {
+						"start": {
+							"line": 7,
+							"column": 85,
+							"offset": 297
+						},
+						"end": {
+							"line": 7,
+							"column": 86,
+							"offset": 298
+						}
+					}
+				},
+				{
+					"type": "aliasWikilink",
+					"destination": "wikilink",
+					"children": [
+						{
+							"type": "text",
+							"value": "\\",
+							"position": {
+								"start": {
+									"line": 7,
+									"column": 97,
+									"offset": 309
+								},
+								"end": {
+									"line": 7,
+									"column": 99,
+									"offset": 311
+								}
+							}
+						}
+					],
+					"position": {
+						"start": {
+							"line": 7,
+							"column": 86,
+							"offset": 298
+						},
+						"end": {
+							"line": 7,
+							"column": 101,
+							"offset": 313
+						}
+					}
+				},
+				{
+					"type": "text",
+					"value": ".",
+					"position": {
+						"start": {
+							"line": 7,
+							"column": 101,
+							"offset": 313
+						},
+						"end": {
+							"line": 7,
+							"column": 102,
+							"offset": 314
+						}
+					}
+				}
+			],
+			"position": {
+				"start": {
+					"line": 7,
+					"column": 1,
+					"offset": 213
+				},
+				"end": {
+					"line": 7,
+					"column": 102,
+					"offset": 314
+				}
+			}
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"value": "You can do the same in alt text:",
+					"position": {
+						"start": {
+							"line": 9,
+							"column": 1,
+							"offset": 316
+						},
+						"end": {
+							"line": 9,
+							"column": 33,
+							"offset": 348
+						}
+					}
+				}
+			],
+			"position": {
+				"start": {
+					"line": 9,
+					"column": 1,
+					"offset": 316
+				},
+				"end": {
+					"line": 9,
+					"column": 33,
+					"offset": 348
+				}
+			}
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "aliasWikilinkEmbed",
+					"destination": "backslash.png",
+					"children": [
+						{
+							"type": "text",
+							"value": "\\",
+							"position": {
+								"start": {
+									"line": 11,
+									"column": 18,
+									"offset": 367
+								},
+								"end": {
+									"line": 11,
+									"column": 20,
+									"offset": 369
+								}
+							}
+						}
+					],
+					"position": {
+						"start": {
+							"line": 11,
+							"column": 1,
+							"offset": 350
+						},
+						"end": {
+							"line": 11,
+							"column": 22,
+							"offset": 371
+						}
+					}
+				}
+			],
+			"position": {
+				"start": {
+					"line": 11,
+					"column": 1,
+					"offset": 350
+				},
+				"end": {
+					"line": 11,
+					"column": 22,
+					"offset": 371
+				}
+			}
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "wikilinkEmbed",
+					"destination": "[test]",
+					"position": {
+						"start": {
+							"line": 13,
+							"column": 1,
+							"offset": 373
+						},
+						"end": {
+							"line": 13,
+							"column": 14,
+							"offset": 386
+						}
+					}
+				}
+			],
+			"position": {
+				"start": {
+					"line": 13,
+					"column": 1,
+					"offset": 373
+				},
+				"end": {
+					"line": 13,
+					"column": 14,
+					"offset": 386
+				}
+			}
+		}
+	],
+	"position": {
+		"start": {
+			"line": 1,
+			"column": 1,
+			"offset": 0
+		},
+		"end": {
+			"line": 13,
+			"column": 14,
+			"offset": 386
+		}
+	}
+}

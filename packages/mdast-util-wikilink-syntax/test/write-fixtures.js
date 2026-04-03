@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import { fixtures, inputDir, outputDir } from "./fixtures.js";
 
-await Promise.all(
+await Promise.allSettled(
 	fixtures.map(async (fixture) => {
 		console.log(`Writing fixture for "${fixture.description}"`);
 		const input = await fs.readFile(new URL(fixture.input, inputDir));

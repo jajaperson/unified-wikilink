@@ -58,6 +58,7 @@ export function wikilink(options = {}) {
 			let depth = 0;
 			let destinationEmpty = true;
 			let aliasEmpty = true;
+			let escape = false;
 
 			return embed ? startEmbed : startWikilink;
 
@@ -127,7 +128,7 @@ export function wikilink(options = {}) {
 			function destination(code) {
 				if (code === null) return nok(code);
 
-				if (code === codes.rightSquareBracket) {
+				if (!escape && code === codes.rightSquareBracket) {
 					if (destinationEmpty) return nok(code);
 					effects.exit("chunkString");
 					effects.exit("wikilinkDestination");
@@ -136,7 +137,7 @@ export function wikilink(options = {}) {
 					return close;
 				}
 
-				if (code === opts.aliasDivider) {
+				if (!escape && code === opts.aliasDivider) {
 					if (destinationEmpty) return nok(code);
 					effects.exit("chunkString");
 					effects.exit("wikilinkDestination");
@@ -152,6 +153,7 @@ export function wikilink(options = {}) {
 
 				effects.consume(code);
 				destinationEmpty = false;
+				escape = code === codes.backslash && !escape;
 				return destination;
 			}
 
@@ -168,11 +170,11 @@ export function wikilink(options = {}) {
 			function alias(code) {
 				if (code === null) return nok(code);
 
-				if (code === codes.leftSquareBracket) {
+				if (!escape && code === codes.leftSquareBracket) {
 					depth++;
 				}
 
-				if (code === codes.rightSquareBracket) {
+				if (!escape && code === codes.rightSquareBracket) {
 					if (depth === 0) {
 						if (aliasEmpty) return nok(code);
 
@@ -187,6 +189,7 @@ export function wikilink(options = {}) {
 
 				effects.consume(code);
 				aliasEmpty = false;
+				escape = code === codes.backslash && !escape;
 				return alias;
 			}
 
