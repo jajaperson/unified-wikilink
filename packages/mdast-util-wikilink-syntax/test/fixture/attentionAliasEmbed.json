@@ -1,0 +1,150 @@
+{
+	"type": "root",
+	"children": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"value": "You could put markdown in the alt text.",
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 1,
+							"offset": 0
+						},
+						"end": {
+							"line": 1,
+							"column": 40,
+							"offset": 39
+						}
+					}
+				}
+			],
+			"position": {
+				"start": {
+					"line": 1,
+					"column": 1,
+					"offset": 0
+				},
+				"end": {
+					"line": 1,
+					"column": 40,
+					"offset": 39
+				}
+			}
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "aliasWikilinkEmbed",
+					"destination": "image.png",
+					"children": [
+						{
+							"type": "text",
+							"value": "Like ",
+							"position": {
+								"start": {
+									"line": 3,
+									"column": 14,
+									"offset": 54
+								},
+								"end": {
+									"line": 3,
+									"column": 19,
+									"offset": 59
+								}
+							}
+						},
+						{
+							"type": "emphasis",
+							"children": [
+								{
+									"type": "text",
+									"value": "this",
+									"position": {
+										"start": {
+											"line": 3,
+											"column": 20,
+											"offset": 60
+										},
+										"end": {
+											"line": 3,
+											"column": 24,
+											"offset": 64
+										}
+									}
+								}
+							],
+							"position": {
+								"start": {
+									"line": 3,
+									"column": 19,
+									"offset": 59
+								},
+								"end": {
+									"line": 3,
+									"column": 25,
+									"offset": 65
+								}
+							}
+						},
+						{
+							"type": "text",
+							"value": ".",
+							"position": {
+								"start": {
+									"line": 3,
+									"column": 25,
+									"offset": 65
+								},
+								"end": {
+									"line": 3,
+									"column": 26,
+									"offset": 66
+								}
+							}
+						}
+					],
+					"position": {
+						"start": {
+							"line": 3,
+							"column": 1,
+							"offset": 41
+						},
+						"end": {
+							"line": 3,
+							"column": 28,
+							"offset": 68
+						}
+					}
+				}
+			],
+			"position": {
+				"start": {
+					"line": 3,
+					"column": 1,
+					"offset": 41
+				},
+				"end": {
+					"line": 3,
+					"column": 28,
+					"offset": 68
+				}
+			}
+		}
+	],
+	"position": {
+		"start": {
+			"line": 1,
+			"column": 1,
+			"offset": 0
+		},
+		"end": {
+			"line": 3,
+			"column": 28,
+			"offset": 68
+		}
+	}
+}

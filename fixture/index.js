@@ -1,4 +1,4 @@
-export const examples = {
+export const inputs = {
 	basic: "Should handle a basic wikilink",
 	alias: "Should handle a basic wikilink with an alias",
 	code: "Should handle a wikilink with a code construct in the alias",
@@ -9,4 +9,9 @@ export const examples = {
 	errEmptyAlias: "Should not render aliased wikilinks with an empty alias",
 	errEof: "Should not render a partial wikilink",
 	errSingleClose: "Should not render a [[wikilink]",
+	basicEmbed: "Should handle a basic wikilink embed",
+	aliasEmbed: "Should handle a basic wikilink embed with alt text",
+	multipleEmbed: "Should handle multiple wikilink embeds in one document",
+	attentionAliasEmbed: "Should handle a wikilink embeds with an emphasis construct in the alt text",
+	loneExclamation: "Should leave a stray `!` alone",
 };

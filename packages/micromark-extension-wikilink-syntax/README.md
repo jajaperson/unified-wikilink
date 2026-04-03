@@ -1,7 +1,7 @@
 # micromark-extension-wikilink-syntax
 
-Syntax-only [micromark][] extension for parsing [Obsidian][]-style wikilinks
-whose aliases can contain markdown.
+Syntax-only [micromark][] extension for parsing [Obsidian][]-style wikilinks and embeds
+whose aliases/alt text can contain markdown.
 
 Note this extension does not extend the html compiler.
 Instead, this is intended to be used together with [mdast-util-wikilink-syntax][] to output syntax trees,

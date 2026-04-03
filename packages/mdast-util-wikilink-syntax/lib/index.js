@@ -1,5 +1,4 @@
 /** @import {Extension as FromMarkdownExtension, CompileContext, Handle as FromMarkdownHandle} from "mdast-util-from-markdown" */
-import { visit } from "unist-util-visit";
 import { ok as assert } from "devlop";
 
 /**
@@ -11,22 +10,33 @@ import { ok as assert } from "devlop";
 export function wikilinkFromMarkdown() {
 	return {
 		enter: {
-			wikilink: enterWikilink,
+			wikilink: enterWikilink(false),
+			wikilinkEmbed: enterWikilink(true),
 			wikilinkDestination: enterWikilinkDestination,
 		},
 		exit: {
 			wikilinkDestination: exitWikilinkDestination,
-			wikilink: exitWikilink,
+			wikilink: exitWikilink(false),
+			wikilinkEmbed: exitWikilink(true),
 		},
 	};
 }
 
 /**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
+ * @param {boolean} embed
+ * @returns Handle for entering a wikilink or wikilink embed
  */
-function enterWikilink(token) {
-	this.enter({ type: "aliasWikilink", destination: "", children: [] }, token);
+function enterWikilink(embed) {
+	/**
+	 * @this {CompileContext}
+	 * @type {FromMarkdownHandle}
+	 */
+	return function (token) {
+		this.enter(
+			{ type: embed ? "aliasWikilinkEmbed" : "aliasWikilink", destination: "", children: [] },
+			token,
+		);
+	};
 }
 
 /**
@@ -44,19 +54,25 @@ function enterWikilinkDestination(token) {
 function exitWikilinkDestination(token) {
 	const dest = this.resume();
 	const node = this.stack[this.stack.length - 1];
-	assert(node.type === "aliasWikilink");
+	assert(node.type === "aliasWikilinkEmbed" || node.type === "aliasWikilink");
 	node.destination = dest;
 }
 
 /**
- * @this {CompileContext}
- * @type {FromMarkdownHandle}
+ * @param {boolean} embed
+ * @returns Handle for exiting a wikilink or wikilink embed
  */
-function exitWikilink(token) {
-	const node = this.stack[this.stack.length - 1];
-	assert(node.type === "aliasWikilink");
-	if (node.children.length === 0) {
-		Object.assign(node, { type: "wikilink", children: undefined });
-	}
-	this.exit(token);
+function exitWikilink(embed) {
+	/**
+	 * @this {CompileContext}
+	 * @type {FromMarkdownHandle}
+	 */
+	return function (token) {
+		const node = this.stack[this.stack.length - 1];
+		assert(node.type === (embed ? "aliasWikilinkEmbed" : "aliasWikilink"));
+		if (node.children.length === 0) {
+			Object.assign(node, { type: embed ? "wikilinkEmbed" : "wikilink", children: undefined });
+		}
+		this.exit(token);
+	};
 }

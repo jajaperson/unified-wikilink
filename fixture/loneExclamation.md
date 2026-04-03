@@ -1,0 +1,1 @@
+A lone exclamation mark should fail gracefully! That is not a wikilink embed.

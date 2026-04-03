@@ -9,6 +9,8 @@ declare module "micromark-util-types" {
 	 */
 	interface TokenTypeMap {
 		wikilink: "wikilink";
+		wikilinkEmbed: "wikilinkEmbed";
+		wikilinkEmbedMarker: "wikilinkEmbedMarker";
 		wikilinkMarker: "wikilinkMarker";
 		wikilinkAliasMarker: "wikilinkAliasMarker";
 		wikilinkDestination: "wikilinkDestination";

@@ -1,3 +1,4 @@
 **/test/fixture
 pnpm-lock.yaml
-examples/*.md
+**/fixture/*.md
+**/fixture/*.json

@@ -1,0 +1,150 @@
+{
+	"type": "root",
+	"children": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"value": "This plugin supports ",
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 1,
+							"offset": 0
+						},
+						"end": {
+							"line": 1,
+							"column": 22,
+							"offset": 21
+						}
+					}
+				},
+				{
+					"type": "aliasWikilink",
+					"destination": "Obsidian",
+					"children": [
+						{
+							"type": "text",
+							"value": "Obsidian's",
+							"position": {
+								"start": {
+									"line": 1,
+									"column": 33,
+									"offset": 32
+								},
+								"end": {
+									"line": 1,
+									"column": 43,
+									"offset": 42
+								}
+							}
+						}
+					],
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 22,
+							"offset": 21
+						},
+						"end": {
+							"line": 1,
+							"column": 45,
+							"offset": 44
+						}
+					}
+				},
+				{
+					"type": "text",
+					"value": " ",
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 45,
+							"offset": 44
+						},
+						"end": {
+							"line": 1,
+							"column": 46,
+							"offset": 45
+						}
+					}
+				},
+				{
+					"type": "aliasWikilinkEmbed",
+					"destination": "obsidan-logo.png",
+					"children": [
+						{
+							"type": "text",
+							"value": "obsidian logo",
+							"position": {
+								"start": {
+									"line": 1,
+									"column": 66,
+									"offset": 65
+								},
+								"end": {
+									"line": 1,
+									"column": 79,
+									"offset": 78
+								}
+							}
+						}
+					],
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 46,
+							"offset": 45
+						},
+						"end": {
+							"line": 1,
+							"column": 81,
+							"offset": 80
+						}
+					}
+				},
+				{
+					"type": "text",
+					"value": " wikilink syntax.",
+					"position": {
+						"start": {
+							"line": 1,
+							"column": 81,
+							"offset": 80
+						},
+						"end": {
+							"line": 1,
+							"column": 98,
+							"offset": 97
+						}
+					}
+				}
+			],
+			"position": {
+				"start": {
+					"line": 1,
+					"column": 1,
+					"offset": 0
+				},
+				"end": {
+					"line": 1,
+					"column": 98,
+					"offset": 97
+				}
+			}
+		}
+	],
+	"position": {
+		"start": {
+			"line": 1,
+			"column": 1,
+			"offset": 0
+		},
+		"end": {
+			"line": 2,
+			"column": 1,
+			"offset": 98
+		}
+	}
+}

@@ -1,7 +1,7 @@
 # mdast-util-wikilink-syntax
 
-[mdast][] extensions to **parse** [Obsidian][]-style wikilinks
-whose aliases can contain markdown.
+[mdast][] extensions to **parse** [Obsidian][]-style wikilinks and embeds
+whose aliases/alt text can contain markdown.
 Intended to be used with [micromark-extension-wikilink-syntax][].
 
 Since [micromark-extension-wikilink-syntax][] is syntax-only,
