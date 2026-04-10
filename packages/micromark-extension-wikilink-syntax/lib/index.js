@@ -146,8 +146,13 @@ export function wikilink(options = {}) {
 					effects.consume(code);
 					effects.exit("wikilinkAliasMarker");
 
-					effects.enter("wikilinkAlias");
-					effects.enter("chunkText", { contentType: "text" });
+					if (embed) {
+						effects.enter("wikilinkEmbedAlt");
+						effects.enter("chunkString", { contentType: "string" });
+					} else {
+						effects.enter("wikilinkAlias");
+						effects.enter("chunkText", { contentType: "text" });
+					}
 					return alias;
 				}
 
@@ -178,8 +183,14 @@ export function wikilink(options = {}) {
 					if (depth === 0) {
 						if (aliasEmpty) return nok(code);
 
-						effects.exit("chunkText");
-						effects.exit("wikilinkAlias");
+						if (embed) {
+							effects.exit("chunkString");
+							effects.exit("wikilinkEmbedAlt");
+						} else {
+							effects.exit("chunkText");
+							effects.exit("wikilinkAlias");
+						}
+
 						effects.enter("wikilinkMarker");
 						effects.consume(code);
 						return close;

@@ -72,26 +72,9 @@
 			"type": "paragraph",
 			"children": [
 				{
-					"type": "aliasWikilinkEmbed",
+					"type": "altWikilinkEmbed",
 					"destination": "vector.svg",
-					"children": [
-						{
-							"type": "text",
-							"value": "A vector image",
-							"position": {
-								"start": {
-									"line": 5,
-									"column": 15,
-									"offset": 48
-								},
-								"end": {
-									"line": 5,
-									"column": 29,
-									"offset": 62
-								}
-							}
-						}
-					],
+					"alt": "A vector image",
 					"position": {
 						"start": {
 							"line": 5,

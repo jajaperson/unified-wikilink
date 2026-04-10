@@ -1,4 +1,4 @@
-import { Literal, Parent, PhrasingContent } from "mdast";
+import { Alternative, Literal, Parent, PhrasingContent } from "mdast";
 export { wikilinkFromMarkdown } from "./lib/index.js";
 
 export interface WikilinkBase {
@@ -13,17 +13,14 @@ export interface WikilinkEmbed extends WikilinkBase {
 	type: "wikilinkEmbed";
 }
 
-export interface AliasWikilinkBase extends Parent {
-	destination: string;
+export interface AliasWikilink extends Parent, WikilinkBase {
+	type: "aliasWikilink";
 	children: PhrasingContent[];
 }
 
-export interface AliasWikilink extends AliasWikilinkBase {
-	type: "aliasWikilink";
-}
-
-export interface AliasWikilinkEmbed extends AliasWikilinkBase {
-	type: "aliasWikilinkEmbed";
+export interface AltWikilinkEmbed extends WikilinkBase, Alternative {
+	type: "altWikilinkEmbed";
+	alt: string;
 }
 
 declare module "mdast" {
@@ -31,7 +28,7 @@ declare module "mdast" {
 		wikilink: Wikilink;
 		wikilinkEmbed: WikilinkEmbed;
 		aliasWikilink: AliasWikilink;
-		aliasWikilinkEmbed: AliasWikilinkEmbed;
+		aliasWikilinkEmbed: AltWikilinkEmbed;
 	}
 }
 

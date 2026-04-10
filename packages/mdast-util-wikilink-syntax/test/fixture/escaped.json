@@ -494,26 +494,9 @@
 			"type": "paragraph",
 			"children": [
 				{
-					"type": "aliasWikilinkEmbed",
+					"type": "altWikilinkEmbed",
 					"destination": "backslash.png",
-					"children": [
-						{
-							"type": "text",
-							"value": "\\",
-							"position": {
-								"start": {
-									"line": 11,
-									"column": 18,
-									"offset": 367
-								},
-								"end": {
-									"line": 11,
-									"column": 20,
-									"offset": 369
-								}
-							}
-						}
-					],
+					"alt": "\\",
 					"position": {
 						"start": {
 							"line": 11,

@@ -15,5 +15,6 @@ declare module "micromark-util-types" {
 		wikilinkAliasMarker: "wikilinkAliasMarker";
 		wikilinkDestination: "wikilinkDestination";
 		wikilinkAlias: "wikilinkAlias";
+		wikilinkEmbedAlt: "wikilinkEmbedAlt";
 	}
 }

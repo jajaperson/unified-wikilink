@@ -7,7 +7,15 @@ export const inputDir = new URL("../../../fixture/", import.meta.url);
 export const outputDir = new URL("fixture/", import.meta.url);
 
 /**
- * @type {Array<{description: string, input: string, output: string, process: (inp: Buffer) => string}>}
+ * @typedef {Object} Fixture
+ * @property {string} description
+ * @property {string} input
+ * @property {string} output
+ * @property {(inp: Buffer) => string} process
+ */
+
+/**
+ * @type {Fixture[]}
  */
 export const fixtures = Object.entries(inputs).map(([name, description]) => ({
 	description,
