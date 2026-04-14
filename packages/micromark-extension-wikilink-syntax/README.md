@@ -52,6 +52,11 @@ Default is `124`, the codepoint for `|`.
 [[destination|alias]]
 ```
 
+###### `options.gfmCompat`
+
+Set to `true` to make aliased wikilinks usable within GFM tables.
+See [this example][example].
+
 ###### Returns
 
 Extension for `micromark` that can be passed in `extensions`,
@@ -71,3 +76,4 @@ This package is safe.
 [npm]: https://docs.npmjs.com/cli/install
 [Obsidian]: https://obsidian.md
 [unist-util-visit]: https://github.com/syntax-tree/unist-util-visit
+[example]: https://github.com/jajaperson/unified-wikilink/tree/main/fixture/gfm.md

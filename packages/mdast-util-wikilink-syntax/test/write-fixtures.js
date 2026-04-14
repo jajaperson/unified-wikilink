@@ -2,11 +2,7 @@
 import fs from "node:fs/promises";
 import { fixtures, inputDir, outputDir } from "./fixtures.js";
 
-const results = await Promise.allSettled(
-	fixtures
-		.filter((fxt) => (process.argv[2] ? fxt.input.includes(process.argv[2]) : true))
-		.map(writeFixture),
-);
+const results = await Promise.allSettled(fixtures.filter((fxt) => fxt.write).map(writeFixture));
 
 for (const [i, res] of results.entries()) {
 	if (res.status === "rejected") {

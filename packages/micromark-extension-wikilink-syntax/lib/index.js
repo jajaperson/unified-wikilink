@@ -1,18 +1,23 @@
 /**
- * @import {Extension, TokenizeContext, Tokenizer, State, Construct, Code} from "micromark-util-types"
+ * @import {Extension, TokenizeContext, Tokenizer, State, Event, Code} from "micromark-util-types"
  */
 
-import { ok as assert } from "devlop";
+import { ok as assert, equal as assertEqual } from "devlop";
 import { codes } from "micromark-util-symbol";
 
 /**
  * @typedef {Object} WikilinkOptions
  * @property {Code} aliasDivider
+ *  the divider between the destination and alias
+ * @property {boolean} gfmCompat
+ *   if true, escapes of the alias divider are ignored. This is necessary to
+ *   make wikilinks with `|` work in tables.
  */
 
 /** @type {WikilinkOptions} */
 const defaultOptions = {
 	aliasDivider: codes.verticalBar,
+	gfmCompat: false,
 };
 
 /**
@@ -73,7 +78,7 @@ export function wikilink(options = {}) {
 			 * @type {State}
 			 */
 			function startEmbed(code) {
-				assert(code === codes.exclamationMark, "expected `!`");
+				assertEqual(code, codes.exclamationMark, "expected `!`");
 
 				effects.enter("wikilinkEmbed");
 
@@ -98,7 +103,7 @@ export function wikilink(options = {}) {
 				if (embed) {
 					if (code !== codes.leftSquareBracket) return nok(code);
 				} else {
-					assert(code === codes.leftSquareBracket, "expected `[`");
+					assertEqual(code, codes.leftSquareBracket, "expected `[`");
 					effects.enter("wikilink");
 				}
 
@@ -139,27 +144,80 @@ export function wikilink(options = {}) {
 
 				if (!escape && code === opts.aliasDivider) {
 					if (destinationEmpty) return nok(code);
-					effects.exit("chunkString");
-					effects.exit("wikilinkDestination");
-
-					effects.enter("wikilinkAliasMarker");
+					beforeAliasMarker();
 					effects.consume(code);
-					effects.exit("wikilinkAliasMarker");
-
-					if (embed) {
-						effects.enter("wikilinkEmbedAlt");
-						effects.enter("chunkString", { contentType: "string" });
-					} else {
-						effects.enter("wikilinkAlias");
-						effects.enter("chunkText", { contentType: "text" });
-					}
+					afterAliasMarker();
 					return alias;
 				}
 
-				effects.consume(code);
-				destinationEmpty = false;
 				escape = code === codes.backslash && !escape;
-				return destination;
+				if (escape && opts.gfmCompat) {
+					return effects.attempt(
+						{
+							name: "escapedAliasMarker",
+							tokenize(effects, ok, nok) {
+								return escapeStart;
+
+								/**
+								 * @type {State}
+								 */
+								function escapeStart(code) {
+									if (destinationEmpty) return nok(code);
+									beforeAliasMarker();
+									assertEqual(code, codes.backslash, "expected backslash");
+									effects.consume(code);
+									return escapedAliasMarker;
+								}
+
+								/**
+								 * @type {State}
+								 */
+								function escapedAliasMarker(code) {
+									if (code !== codes.verticalBar) return nok(code);
+									effects.consume(code);
+									effects.exit("wikilinkAliasMarker");
+									return ok;
+								}
+							},
+						},
+						(code) => {
+							if (embed) {
+								effects.enter("wikilinkEmbedAlt");
+								effects.enter("chunkString", { contentType: "string" });
+							} else {
+								effects.enter("wikilinkAlias");
+								effects.enter("chunkText", { contentType: "text" });
+							}
+							return alias(code);
+						},
+						consumeAndRepeat,
+					)(code);
+				} else return consumeAndRepeat(code);
+
+				/** @type State */
+				function consumeAndRepeat(code) {
+					destinationEmpty = false;
+					effects.consume(code);
+					return destination;
+				}
+			}
+
+			function beforeAliasMarker() {
+				effects.exit("chunkString");
+				effects.exit("wikilinkDestination");
+				effects.enter("wikilinkAliasMarker");
+			}
+
+			function afterAliasMarker() {
+				effects.exit("wikilinkAliasMarker");
+
+				if (embed) {
+					effects.enter("wikilinkEmbedAlt");
+					effects.enter("chunkString", { contentType: "string" });
+				} else {
+					effects.enter("wikilinkAlias");
+					effects.enter("chunkText", { contentType: "text" });
+				}
 			}
 
 			/**
