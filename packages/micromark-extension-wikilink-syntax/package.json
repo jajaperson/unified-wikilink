@@ -4,7 +4,7 @@
 	"repository": "https://github.com/jajaperson/unified-wikilink/tree/main/packages/micromark-extension-wikilink-syntax",
 	"type": "module",
 	"main": "index.js",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"keywords": [
 		"remark",
 		"markdown",

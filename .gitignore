@@ -4,4 +4,6 @@ node_modules
 coverage
 
 *.d.ts
+*.d.ts.map
 !packages/*/index.d.ts
+tsconfig.tsbuildinfo

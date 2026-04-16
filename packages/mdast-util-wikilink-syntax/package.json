@@ -4,7 +4,7 @@
 	"repository": "https://github.com/jajaperson/unified-wikilink/tree/main/packages/mdast-util-wikilink-syntax",
 	"type": "module",
 	"main": "index.js",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"scripts": {
 		"test": "node --conditions development test/index.js",
 		"write-fixtures": "node --conditions development test/write-fixtures.js"
